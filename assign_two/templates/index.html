@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+     
+    <title>HTML TABLE</title>
+</head>
+<body>
+    <div style="text-align: center;"><h1>HTML TABLE</h1></div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Full Name</th>
+          </tr>
+        </thead>
+        <tbody>
+            <!-- aamalt loop temchi through el dictionnary "dict item" function
+            t9oulou basically taada aal items lkol mtaa ldico -->
+            {% for dict_item in users %}
+          <tr>
+            <!-- hatina fkol column el data mteeha jebna ml dico eli hachtna bih
+            exemple fl dict fles list fama firstname khdhina that ti hasilou
+        fhemtni mkch mnayek XD -->
+           <th scope="row"></th>
+            <td>{{dict_item["first_name"]}}</td>
+            <td>{{dict_item["last_name"]}}</td>
+            <td>{{dict_item["first_name"]}}&nbsp;{{dict_item["last_name"]}} </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+</body>
+ 
+</html>
